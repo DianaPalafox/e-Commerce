@@ -4,7 +4,7 @@
   }
   
   :root {
-    --heights: 92vh;
+    --heights: 90vh;
     --widths: 100%;
   }
   
@@ -12,7 +12,6 @@
     height: var(--heights);
     width: var(--widths);
     position: relative;
-    margin-top: 70px;
     overflow: hidden;
   }
 
