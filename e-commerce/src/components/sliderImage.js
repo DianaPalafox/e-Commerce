@@ -6,23 +6,23 @@ import Five from '../images/img5.jpeg';
 
 const SliderImage = [
     {
-        title: 'First Slide',
+        title: 'Print it',
         urls: First,
     },
     {
-        title: 'Second Slide',
+        title: 'Print it',
         urls: Second,
     },
     {
-        title: 'Third Slide',
+        title: 'Print it',
         urls: Third,
     },
     {
-        title: 'Four Slide',
+        title: 'Print it',
         urls: Four,
     },
     {
-        title: 'Five Slide',
+        title: 'Print it',
         urls: Five,
     },
 ];
