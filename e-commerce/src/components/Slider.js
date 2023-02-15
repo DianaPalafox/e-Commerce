@@ -4,6 +4,7 @@ import Dots from "./Dots";
 import Arrows from "./Arrows";
 import sliderImage from "./sliderImage";
 import "./slider.css";
+import { Link } from "react-router-dom";
 
 const len = sliderImage.length - 1;
 
@@ -19,9 +20,11 @@ function Slider(props) {
 
   return (
     <div className="slider-container">
+      <Link to='/shop'>
       <div className="button-container">
-        <button className="button">Shop Now</button>
+          <button className="button">Shop Now</button>
       </div>
+      </Link>
       <SliderContent activeIndex={activeIndex} sliderImage={sliderImage} />
       <Arrows
         prevSlide={() =>

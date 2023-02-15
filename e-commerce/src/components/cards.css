@@ -18,3 +18,53 @@
 .title-card{
     font-size: 1.5rem;
 }
+
+.product-img{
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.product-card{
+    display: flex; 
+    justify-content: center;
+    margin: 30px;
+    gap: 40px;
+}
+
+.product-info{
+    margin-bottom: 15px;
+}
+
+.title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 15px;
+}
+
+.price{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+input{
+    width: 50px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    border-style: none;
+    color: white;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: red;
+
+}
