@@ -6,7 +6,9 @@ function ShopPage() {
     const cards = data.map(item => {
         return (
             <Card 
+                product={item}
                 key={item.id}
+                id={item.id}
                 img={item.coverImg}
                 title={item.title}
                 price={item.price}
