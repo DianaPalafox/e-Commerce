@@ -4,11 +4,13 @@ import './header.css'
 import { Link } from 'react-router-dom'
 import { CiShoppingCart } from "react-icons/ci"
 import { ShopContext } from '../context/shop-context'
-import { useContext } from 'react'; 
+import { useContext, useState } from 'react'; 
+import Cart from '../pages/ShoppingCart'
 
 
 function Header() {
     const { shoppingCart } = useContext(ShopContext);
+    const [isOpen, setIsOpen] = useState(false)
     return(
         <nav className="header">
             <ul className="links">
@@ -21,12 +23,12 @@ function Header() {
                     <Link to='/shop'>
                         <li className='shop-print'>Shop Prints</li>
                     </Link>
-                    <Link to='/cart'>
+                    
                         <li className='icon'>
-                            <CiShoppingCart size={30}/>
-                            <div className="cart-num">{shoppingCart}</div>
+                            <button className='cart-btn' onClick={() => setIsOpen(true)}><CiShoppingCart size={30}/>
+                            <div className="cart-num">{shoppingCart}</div></button>
                         </li>
-                    </Link>
+                    <Cart open={isOpen} onClose = {() => setIsOpen(false)}/>
                 </div>
                 
             </ul>

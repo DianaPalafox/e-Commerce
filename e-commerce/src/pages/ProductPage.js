@@ -25,8 +25,8 @@ function ProductPage() {
                     <p className='price'>${product.price}</p>
                 </div>
                 <div className='cart-buttons'>
-                    <button onClick={() => addToCart(product.id)}>ADD TO CART</button>
-                    <button>INSTANT CHECKOUT </button>
+                    <button className='add-to-cart-btn' onClick={() => addToCart(product.id)}>ADD TO CART</button>
+                    <button className='checkout-btn'>INSTANT CHECKOUT </button>
                 </div>  
             </div>
         </div>

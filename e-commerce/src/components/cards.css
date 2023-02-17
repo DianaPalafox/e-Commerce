@@ -54,7 +54,8 @@ input{
     margin-bottom: 15px;
 }
 
-button{
+.add-to-cart-btn, 
+.checkout-btn{
     width: 200px;
     height: 40px;
     background-color: black;
@@ -64,7 +65,8 @@ button{
     margin-bottom: 20px;
 }
 
-button:hover{
+.add-to-cart-btn:hover,
+.checkout-btn:hover{
     cursor: pointer;
     background-color: red;
 

@@ -53,5 +53,12 @@ a{
     width: 20px;
     height: 20px;
     color: white;
-    text-align: center;
+    padding-top: 2px;
+}
+
+.cart-btn{
+    border-style: none;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
 }
