@@ -3,9 +3,12 @@ import logo from './logo.png'
 import './header.css'
 import { Link } from 'react-router-dom'
 import { CiShoppingCart } from "react-icons/ci"
+import { ShopContext } from '../context/shop-context'
+import { useContext } from 'react'; 
 
 
 function Header() {
+    const { shoppingCart } = useContext(ShopContext);
     return(
         <nav className="header">
             <ul className="links">
@@ -19,7 +22,10 @@ function Header() {
                         <li className='shop-print'>Shop Prints</li>
                     </Link>
                     <Link to='/cart'>
-                        <li className='icon'><CiShoppingCart size={30}/></li>
+                        <li className='icon'>
+                            <CiShoppingCart size={30}/>
+                            <div className="cart-num">{shoppingCart}</div>
+                        </li>
                     </Link>
                 </div>
                 

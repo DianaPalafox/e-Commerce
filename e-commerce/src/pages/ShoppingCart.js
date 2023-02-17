@@ -3,9 +3,12 @@ import '../components/modal.css'
 import { ShopContext } from '../context/shop-context'
 import { useContext } from 'react'; 
 import CartItem from '../components/CartItem';
+import { Link } from 'react-router-dom'
 
 function Cart() {
-    const { cartItems } = useContext(ShopContext);
+    const { cartItems, getTotalAmount } = useContext(ShopContext);
+
+    const totalAmount = getTotalAmount()
 
     const items = data.map((item) => {
         if(cartItems[item.id] !== 0) {
@@ -26,6 +29,17 @@ function Cart() {
                 <h1>Your Cart Items</h1>
             </div>
             <div className='cart-items'>{items}</div>
+            {totalAmount > 0 ? 
+            <div className='checkout'>
+                <p>Subtotal: ${totalAmount}</p>
+                <Link to='/shop'>
+                    <button>Continue Shopping</button>
+                </Link>
+                <button>Check Out</button>
+            </div> 
+            : <h1>Your Cart is Empty</h1>  
+            }
+            
         </div>
     )
 }
